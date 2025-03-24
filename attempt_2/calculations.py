@@ -58,11 +58,11 @@ def calculate_state_1_prob(transaction, mu_amount_s1, sigma_amount_s1, shape_s1,
     prob_amount = gaussian_probability(transaction["amount"], mu_amount_s1, sigma_amount_s1)
     prob_time = weibull_probability(transaction["time"], shape_s1, scale_s1)
     prob_distance = gaussian_probability(transaction["distance"], mu_distance_s1, sigma_distance_s1)
-    return prob_amount * prob_time * prob_distance
+    return prob_amount * prob_time * 1
 
 # Function for Fraudulent State (State 2)
 def calculate_state_2_prob(transaction, mu_amount_s2, sigma_amount_s2, shape_s2, scale_s2, mu_distance_s2, sigma_distance_s2):
     prob_amount = gaussian_probability(transaction["amount"], mu_amount_s2, sigma_amount_s2)
     prob_time = weibull_probability(transaction["time"], shape_s2, scale_s2)
     prob_distance = gaussian_probability(transaction["distance"], mu_distance_s2, sigma_distance_s2)
-    return prob_amount * prob_time * prob_distance
+    return prob_amount * prob_time * 1

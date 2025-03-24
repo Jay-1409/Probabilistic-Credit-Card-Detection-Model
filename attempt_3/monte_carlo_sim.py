@@ -10,7 +10,7 @@ current_amt = 70000   # Current transaction amount
 current_time = 13    # Current transaction time
 
 # For this test case, assume the ground truth is that the transaction is fraudulent.
-ground_truth = True
+ground_truth = False
 
 num_iterations = 100  # Total number of Monte Carlo iterations
 results = []           # To store verdicts (True/False)

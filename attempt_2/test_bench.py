@@ -19,3 +19,23 @@ while testcase > 0:
     print(f"Execution time: {completion_time:.4f} seconds")
     testcase = testcase - 1;
     
+    #GOOD TEST-CASES
+    #8989
+    #1
+    #7000
+    #2
+    
+    #8080
+    #4
+    #10
+    #5
+    
+    #10
+    #14
+    #1809
+    #15
+    
+    #10
+    #14
+    #8809
+    #16

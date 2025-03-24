@@ -65,17 +65,17 @@ params = {
 def classify_transaction(transaction, params, threshold=0.5):
     prob_state1 = (gaussian_probability(transaction["amount"], params['mu_amount_s1'], params['sigma_amount_s1']) *
                    weibull_probability(transaction["time"], params['shape_s1'], params['scale_s1']) *
-                   gaussian_probability(transaction["distance"], params['mu_distance_s1'], params['sigma_distance_s1']))
+                   1)
     prob_state2 = (gaussian_probability(transaction["amount"], params['mu_amount_s2'], params['sigma_amount_s2']) *
                    weibull_probability(transaction["time"], params['shape_s2'], params['scale_s2']) *
-                   gaussian_probability(transaction["distance"], params['mu_distance_s2'], params['sigma_distance_s2']))
+                   1)
     
     # Normalize or compare directly; here we simply choose the higher probability as the label.
     return 1 if prob_state2 > prob_state1 else 0
 
 # For demonstration, assume your test data includes 'time', 'amount', and 'distance'
 # You might need to create a consistent format for test_df. For example:
-test_df['distance'] = np.random.rand(len(test_df)) * 20  # Dummy distance values
+# test_df['distance'] = np.random.rand(len(test_df)) * 20  # Dummy distance values
 test_df['amount'] = test_df['Amount']
 test_df['time'] = test_df['Time']
 
