@@ -6,8 +6,8 @@ import handledata as hd
 # and Weibull parameters (shape, scale) for Time.
 def calculate_variable_values():
     # Load the CSV files
-    fraud_data = pd.read_csv('attempt_2/fraudulent-data.csv')
-    non_fraud_data = pd.read_csv('attempt_2/non-fraudent-data_v1.csv')
+    fraud_data = pd.read_csv('csvs/fraudulent-data.csv')
+    non_fraud_data = pd.read_csv('csvs/non-fraudent-data_v1.csv')
     if not isinstance(fraud_data, pd.DataFrame):
         print("fraud_data is not a DataFrame")
     if not isinstance(non_fraud_data, pd.DataFrame):

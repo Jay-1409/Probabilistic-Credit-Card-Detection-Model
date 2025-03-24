@@ -4,7 +4,7 @@ from hmmlearn import hmm
 import numpy as np
 import time
 # Load the dataset
-df = pd.read_csv('attempt_1\creditcard.csv')
+df = pd.read_csv('csvs/creditcard.csv')
 
 # Step 1: Print the first few rows to get an idea of the data
 print("Dataset preview:")
