@@ -28,7 +28,7 @@ def calculate_variable_values():
     shape_s2, loc_s2, scale_s2 = weibull_min.fit(fraud_data['Time_of_Transaction'], floc=0)  # floc=0 ensures scale fitting
     # For non-fraudulent data
     shape_s1, loc_s1, scale_s1 = weibull_min.fit(non_fraud_data['Time_of_Transaction'], floc=0)  # floc=0 ensures scale fitting
-    print(mu_amount_s2);
+    # print(mu_amount_s2);
     # Return the calculated values
     return {
         'mu_amount_s1': mu_amount_s1,
